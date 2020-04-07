@@ -1,8 +1,6 @@
 name: Scheduler
 
-on:
-  schedule:
-    - cron:  "*/30 * * * *"
+on: push
 
 jobs:
   build:
