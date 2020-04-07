@@ -1,6 +1,7 @@
 import json
 import requests
 
+# 都道府県の単位を合わせる用 東京 => 東京都
 t = ["東京"]
 f = ["大阪", "京都"]
 k = [
@@ -13,10 +14,17 @@ k = [
     "宮崎", "鹿児島", "沖縄"
 ]
 
+# API
 base_url = "https://covid19-japan-web-api.now.sh/api/v1/prefectures"
-r = requests.get(base_url)
 
+# データ格納
 json_dic = {}
+
+
+r = requests.get(base_url)
+if r.status_code != 200:
+    print("データを取得できませんでした。")
+    exit()
 
 get_json_dic = r.json()
 for i in get_json_dic:
