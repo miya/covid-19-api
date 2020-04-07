@@ -13,5 +13,5 @@
 [GitHub Actionsを活用して擬似APIサーバーを用意する](https://qiita.com/Kanahiro/items/e7021b05199ae52e818b)
 
 ## 擬似API
-[raw](https://raw.githubusercontent.com/miya/covid19-jp-api/gh-pages/prefectures.json)
+[raw](https://raw.githubusercontent.com/miya/covid19-jp-api/gh-pages/prefectures.json)  
 [GithubPages](https://miya.github.io/covid19-jp-api/prefectures.json)
