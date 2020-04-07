@@ -8,6 +8,23 @@
 ## なぜつくった
 [covid19-jp-linebot](https://github.com/miya/covid19-jp-linebot)という日本国内のコロナウイルスによる感染者数と死亡者数を返すlinebotを開発しています。linebotは不特定多数のユーザーに使われることが想定されるので、メッセージが送られるたびにAPIを叩いてしまうとサーバーの運営者に多大な負担がかかってしまいます。そのため、決められた時間にだけAPIを叩き自分のGithubPagesにプッシュし、linebotにはその擬似APIを叩かせることで負担を軽減することができると考えたので作りました。
 
+## 叩く
+```
+{
+  "update": "2020-04-08 01:03",
+  "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
+  "prefectures_data": {
+    "北海道": {
+      "cases": 195,
+      "deaths": 9
+    },
+    "青森県": {
+      "cases": 12,
+      "deaths": 0
+    },
+ ...
+```
+
 ## 参考
 * [covid19hokkaido_scraping](https://github.com/Kanahiro/covid19hokkaido_scraping)  
 * [GitHub Actionsを活用して擬似APIサーバーを用意する](https://qiita.com/Kanahiro/items/e7021b05199ae52e818b)
