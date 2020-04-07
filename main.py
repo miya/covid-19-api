@@ -17,8 +17,6 @@ base_url = "https://covid19-japan-web-api.now.sh/api/v1/prefectures"
 r = requests.get(base_url)
 
 json_dic = {}
-cases_num = 0
-deaths_num = 0
 
 get_json_dic = r.json()
 for i in get_json_dic:
