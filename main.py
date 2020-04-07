@@ -1,5 +1,6 @@
 import json
 import requests
+from datetime import datetime, timedelta, timezone
 
 # 都道府県の単位を合わせる用 東京 => 東京都
 t = ["東京"]
@@ -17,9 +18,19 @@ k = [
 # API
 base_url = "https://covid19-japan-web-api.now.sh/api/v1/prefectures"
 
-# データ格納
-json_dic = {}
+# アップデート時間
+jst = timezone(timedelta(hours=+9), "JST")
+now = datetime.now(jst).strftime("%Y-%m-%d %H:%M")
 
+# 公開用json
+json_dic = {
+    "update": now,
+    "data_source": base_url,
+    "prefectures_data": {}
+}
+
+# 一時データ
+data = {}
 
 r = requests.get(base_url)
 if r.status_code != 200:
@@ -29,6 +40,7 @@ if r.status_code != 200:
 get_json_dic = r.json()
 for i in get_json_dic:
 
+    # 都道府県名の単位の修正
     name_ja = i["name_ja"]
     if name_ja in t:
         i["name_ja"] = name_ja + "都"
@@ -37,12 +49,17 @@ for i in get_json_dic:
     elif name_ja in k:
         i["name_ja"] = name_ja + "県"
 
-    json_dic.update({
+    # 都道府県名、感染者数、死亡者数を格納
+    data.update({
         i["name_ja"]: {
             "cases": i["cases"],
             "deaths": i["deaths"]
         }
     })
 
+# 公開用jsonにデータを格納
+json_dic.update({"prefectures_data": data})
+
+# jsonファイルの生成
 with open("data/prefectures.json", "w") as f:
     json.dump(json_dic, f, ensure_ascii=False, indent=2)
