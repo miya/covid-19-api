@@ -1,6 +1,8 @@
 name: Scheduler
 
-on: push
+on:
+  schedule:
+    - cron:  "*/30 * * * *"
 
 jobs:
   build:
@@ -18,5 +20,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./data/prefectures.json
+        publish_dir: ./data
         publish_branch: gh-pages
