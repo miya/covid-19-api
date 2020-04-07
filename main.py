@@ -15,6 +15,9 @@ k = [
     "宮崎", "鹿児島", "沖縄"
 ]
 
+# ファイル名
+file_path = "data/prefectures.json"
+
 # API
 base_url = "https://covid19-japan-web-api.now.sh/api/v1/prefectures"
 
@@ -31,6 +34,7 @@ json_dic = {
 
 # 一時データ
 data = {}
+
 
 r = requests.get(base_url)
 if r.status_code != 200:
@@ -61,5 +65,5 @@ for i in get_json_dic:
 json_dic.update({"prefectures_data": data})
 
 # jsonファイルの生成
-with open("data/prefectures.json", "w") as f:
+with open(file_path, "w") as f:
     json.dump(json_dic, f, ensure_ascii=False, indent=2)
