@@ -1,5 +1,6 @@
 import json
 import requests
+from time import sleep
 from datetime import datetime, timedelta, timezone
 
 # 都道府県の単位を合わせる用 東京 => 東京都
@@ -34,14 +35,25 @@ json_dic = {
 
 # 一時データ
 data = {}
+get_json_dic = {}
+total_cases = 0
+total_deaths = 0
 
 
-r = requests.get(base_url)
-if r.status_code != 200:
-    print("データを取得できませんでした。")
-    exit()
+cnt = 0
+for i in range(5):
+    r = requests.get(base_url)
+    s = r.status_code
+    if s == 200:
+        get_json_dic = r.json()
+        break
+    else:
+        cnt += 1
+        sleep(1)
+    if cnt >= 4:
+        print("データを取得できませんでした。")
+        exit()
 
-get_json_dic = r.json()
 for i in get_json_dic:
 
     # 都道府県名の単位の修正
@@ -52,6 +64,10 @@ for i in get_json_dic:
         i["name_ja"] = name_ja + "府"
     elif name_ja in k:
         i["name_ja"] = name_ja + "県"
+
+    # 各都道府県の感染者数・死亡者数を加算
+    total_cases += i["cases"]
+    total_deaths += i["deaths"]
 
     # 都道府県名、感染者数、死亡者数を格納
     data.update({
