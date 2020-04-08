@@ -6,12 +6,12 @@
 コロナウイルスによる都道府県別の感染者数と死亡者数を公開している[API](https://github.com/ryo-ma/covid19-japan-web-api)をGithubActionsで定期的に叩き、このリポジトリのgh-pagesブランチにjsonファイルをプッシュすることで自分のGithubPagesに擬似的にAPIを作っています。
 
 ## なぜつくった
-[covid19-jp-linebot](https://github.com/miya/covid19-jp-linebot)という日本国内のコロナウイルスによる感染者数と死亡者数を返すlinebotを開発しています。linebotは不特定多数のユーザーに使われることが想定されるので、メッセージが送られるたびにAPIを叩いてしまうとサーバーの運営者に多大な負担がかかってしまいます。そのため、決められた時間にだけAPIを叩き自分のGithubPagesにプッシュし、linebotにはその擬似APIを叩かせることで負担を軽減することができると考えたので作りました。
+[covid19-jp-linebot](https://github.com/miya/covid19-jp-linebot)という日本国内のコロナウイルスによる感染者数と死亡者数を返すlinebotを開発しています。linebotは不特定多数のユーザーに使われることが想定されるので、メッセージが送られるたびにAPIを叩いてしまうとサーバーの運営者に負担がかかってしまう恐れがあります。そのため、決められた時間にだけAPIを叩き自分のGithubPagesにプッシュし、linebotにはその擬似APIを叩かせることで負担を軽減することができると考えたので作りました。
 
 ## 叩く
 ```
 {
-  "update": "2020-04-08 01:03",
+  "update": "2020-04-08 01:00",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
