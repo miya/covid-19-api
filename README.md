@@ -30,4 +30,4 @@
 * [GitHub Actionsを活用して擬似APIサーバーを用意する](https://qiita.com/Kanahiro/items/e7021b05199ae52e818b)
 
 ## 擬似API
-* [githubusercontent](https://covid19-japan-web-api.now.sh/api/v1/prefectures)  
+* [githubusercontent](https://raw.githubusercontent.com/miya/covid19-jp-api/api/prefectures.json)  
