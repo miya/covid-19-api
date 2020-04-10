@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-11 07:31",
+  "update": "2020-04-11 08:00",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -127,7 +127,7 @@
       "deaths": 0
     },
     "島根県": {
-      "cases": 2,
+      "cases": 6,
       "deaths": 0
     },
     "岡山県": {
