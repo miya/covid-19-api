@@ -1,6 +1,7 @@
 name: Scheduler
 
 on: push
+
   
 jobs:
   build:
