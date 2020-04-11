@@ -85,7 +85,7 @@ with open(file_path, "w") as f:
     json.dump(json_dic, f, ensure_ascii=False, indent=2)
 
 # 前日比用
-if datetime.now().hour == 0:
+if datetime.now(jst).hour == 0:
     with open("data/after_prefectures.json", "w") as f:
         json.dump(json_dic, f, ensure_ascii=False, indent=2)
 
