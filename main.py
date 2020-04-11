@@ -84,8 +84,8 @@ json_dic.update({"prefectures_data": data})
 with open(file_path, "w") as f:
     json.dump(json_dic, f, ensure_ascii=False, indent=2)
 
-
-if datetime.now().hour == 00:
+# 前日比用
+if datetime.now().hour == 0:
     with open("data/after_prefectures.json", "w") as f:
         json.dump(json_dic, f, ensure_ascii=False, indent=2)
 
