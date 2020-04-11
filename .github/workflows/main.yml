@@ -1,9 +1,7 @@
 name: Scheduler
 
-on:
-  schedule:
-    - cron:  "*/30 * * * *"
-
+on: push
+  
 jobs:
   build:
     runs-on: ubuntu-latest
