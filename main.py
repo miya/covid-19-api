@@ -17,7 +17,8 @@ k = [
 ]
 
 # ファイル名
-file_path = "data/prefectures.json"
+file_path = {"main": "data/prefectures.json",
+             "before": "data/before_prefectures.json"}
 
 # API
 base_url = "https://covid19-japan-web-api.now.sh/api/v1/prefectures"
@@ -30,62 +31,62 @@ now = datetime.now(jst).strftime("%Y-%m-%d %H:%M")
 json_dic = {
     "update": now,
     "data_source": base_url,
-    "prefectures_data": {}
+    "prefectures_data": {},
 }
 
-# 一時データ
-data = {}
-get_json_dic = {}
-total_cases = 0
-total_deaths = 0
+def create_json(json_type):
+    data = {}
+    get_json_dic = {}
+    total_cases = 0
+    total_deaths = 0
+    cnt = 0
+
+    for i in range(5):
+        r = requests.get(base_url)
+        s = r.status_code
+        if s == 200:
+            get_json_dic = r.json()
+            break
+        else:
+            cnt += 1
+            sleep(1)
+        if cnt >= 4:
+            print("データを取得できませんでした。")
+            exit()
+
+    for i in get_json_dic:
+
+        # 都道府県名の単位の修正
+        name_ja = i["name_ja"]
+        if name_ja in t:
+            i["name_ja"] = name_ja + "都"
+        elif name_ja in f:
+            i["name_ja"] = name_ja + "府"
+        elif name_ja in k:
+            i["name_ja"] = name_ja + "県"
+
+        # 各都道府県の感染者数・死亡者数を加算
+        total_cases += i["cases"]
+        total_deaths += i["deaths"]
+
+        # 都道府県名、感染者数、死亡者数を格納
+        data.update({
+            i["name_ja"]: {
+                "cases": i["cases"],
+                "deaths": i["deaths"]
+            }
+        })
+
+    # 公開用jsonにデータを格納
+    json_dic.update({"prefectures_data": data})
+
+    # jsonファイルの生成
+    with open(file_path[json_type], "w") as file_:
+        json.dump(json_dic, file_, ensure_ascii=False, indent=2)
 
 
-cnt = 0
-for i in range(5):
-    r = requests.get(base_url)
-    s = r.status_code
-    if s == 200:
-        get_json_dic = r.json()
-        break
-    else:
-        cnt += 1
-        sleep(1)
-    if cnt >= 4:
-        print("データを取得できませんでした。")
-        exit()
-
-for i in get_json_dic:
-
-    # 都道府県名の単位の修正
-    name_ja = i["name_ja"]
-    if name_ja in t:
-        i["name_ja"] = name_ja + "都"
-    elif name_ja in f:
-        i["name_ja"] = name_ja + "府"
-    elif name_ja in k:
-        i["name_ja"] = name_ja + "県"
-
-    # 各都道府県の感染者数・死亡者数を加算
-    total_cases += i["cases"]
-    total_deaths += i["deaths"]
-
-    # 都道府県名、感染者数、死亡者数を格納
-    data.update({
-        i["name_ja"]: {
-            "cases": i["cases"],
-            "deaths": i["deaths"]
-        }
-    })
-
-# 公開用jsonにデータを格納
-json_dic.update({"prefectures_data": data})
-
-# jsonファイルの生成
-with open(file_path, "w") as f:
-    json.dump(json_dic, f, ensure_ascii=False, indent=2)
-
-# 前日比用
-if datetime.now(jst).hour == 0:
-    with open("data/after_prefectures.json", "w") as f:
-        json.dump(json_dic, f, ensure_ascii=False, indent=2)
-
+if __name__ == "__main__":
+    create_json("main")
+    now = datetime.now(jst)
+    if now.hour is 0 and now.minute <= 30:
+        create_json("before")
