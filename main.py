@@ -17,8 +17,7 @@ k = [
 ]
 
 # ファイル名
-file_path = {"main": "data/prefectures.json",
-             "before": "data/before_prefectures.json"}
+file_path = "data/prefectures.json"
 
 # API
 base_url = "https://covid19-japan-web-api.now.sh/api/v1/prefectures"
@@ -34,7 +33,7 @@ json_dic = {
     "prefectures_data": {},
 }
 
-def create_json(json_type):
+def create_json():
     data = {}
     get_json_dic = {}
     total_cases = 0
@@ -81,12 +80,9 @@ def create_json(json_type):
     json_dic.update({"prefectures_data": data})
 
     # jsonファイルの生成
-    with open(file_path[json_type], "w") as file_:
+    with open(file_path, "w") as file_:
         json.dump(json_dic, file_, ensure_ascii=False, indent=2)
 
 
 if __name__ == "__main__":
-    create_json("main")
-    now = datetime.now(jst)
-    if now.hour is 0 and now.minute <= 30:
-        create_json("before")
+    create_json()
