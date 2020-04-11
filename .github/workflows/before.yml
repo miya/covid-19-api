@@ -1,8 +1,6 @@
 name: runs every 0:00(JST)
 
-on:
-  schedule:
-    - cron:  "39 16 * * *"
+on: push
   
 jobs:
   build:
