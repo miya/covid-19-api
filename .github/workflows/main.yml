@@ -1,7 +1,8 @@
 name: Scheduler
 
-on: push
-
+on:
+  schedule:
+    - cron:  "*/30 * * * *"
   
 jobs:
   build:
@@ -21,3 +22,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./data
         publish_branch: api
+on:
+  schedule:
+    - cron:  "*/30 * * * *"
