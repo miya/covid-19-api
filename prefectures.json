@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-12 17:06",
+  "update": "2020-04-12 17:34",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -55,8 +55,8 @@
       "deaths": 40
     },
     "神奈川県": {
-      "cases": 516,
-      "deaths": 11
+      "cases": 525,
+      "deaths": 12
     },
     "新潟県": {
       "cases": 42,
