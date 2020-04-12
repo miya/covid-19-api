@@ -1,8 +1,6 @@
 name: runs every 0:00(JST)
 
-on:
-  schedule:
-    - cron:  "00 15 * * *"
+on: push
   
 jobs:
   build:
@@ -14,7 +12,7 @@ jobs:
       run: pip3 install -r requirements.txt
 
     - name: save json
-      run: python3 main.py
+      run: python3 get_before_prefectures_data.py
 
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
