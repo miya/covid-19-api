@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-12 21:06",
+  "update": "2020-04-12 21:33",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -39,20 +39,20 @@
       "deaths": 0
     },
     "群馬県": {
-      "cases": 79,
+      "cases": 87,
       "deaths": 2
     },
     "埼玉県": {
-      "cases": 376,
+      "cases": 379,
       "deaths": 6
     },
     "千葉県": {
-      "cases": 468,
+      "cases": 467,
       "deaths": 5
     },
     "東京都": {
       "cases": 2068,
-      "deaths": 40
+      "deaths": 42
     },
     "神奈川県": {
       "cases": 545,
@@ -63,7 +63,7 @@
       "deaths": 0
     },
     "富山県": {
-      "cases": 40,
+      "cases": 44,
       "deaths": 0
     },
     "石川県": {
@@ -75,7 +75,7 @@
       "deaths": 2
     },
     "山梨県": {
-      "cases": 34,
+      "cases": 35,
       "deaths": 0
     },
     "長野県": {
@@ -83,7 +83,7 @@
       "deaths": 0
     },
     "岐阜県": {
-      "cases": 106,
+      "cases": 112,
       "deaths": 1
     },
     "静岡県": {
@@ -107,7 +107,7 @@
       "deaths": 3
     },
     "大阪府": {
-      "cases": 766,
+      "cases": 811,
       "deaths": 6
     },
     "兵庫県": {
@@ -135,7 +135,7 @@
       "deaths": 0
     },
     "広島県": {
-      "cases": 56,
+      "cases": 59,
       "deaths": 0
     },
     "山口県": {
