@@ -2,7 +2,7 @@ name: runs every 9:00(JST)
 
 on:
   schedule:
-    - cron:  "00 24 * * *"
+    - cron:  "00 0 * * *"
 
 jobs:
   build:
