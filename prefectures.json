@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-12 12:05",
+  "update": "2020-04-12 12:34",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -159,7 +159,7 @@
       "deaths": 0
     },
     "福岡県": {
-      "cases": 332,
+      "cases": 339,
       "deaths": 1
     },
     "佐賀県": {
