@@ -20,7 +20,8 @@ k = [
 file_path = "data/prefectures.json"
 
 # API
-base_url = "https://covid19-japan-web-api.now.sh/api/v1/prefectures"
+base_url = {"prefectures_data": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
+            "before_prefectures_data": "https://raw.githubusercontent.com/miya/covid19-jp-api/api2/before_prefectures.json"}
 
 # アップデート時間
 jst = timezone(timedelta(hours=+9), "JST")
@@ -29,11 +30,12 @@ now = datetime.now(jst).strftime("%Y-%m-%d %H:%M")
 # 公開用json
 json_dic = {
     "update": now,
-    "data_source": base_url,
+    "data_source": base_url["prefectures_data"],
     "prefectures_data": {},
+    "before_prefectures_data": {}
 }
 
-def create_json():
+def create_json(json_type):
     data = {}
     get_json_dic = {}
     total_cases = 0
@@ -41,7 +43,7 @@ def create_json():
     cnt = 0
 
     for i in range(5):
-        r = requests.get(base_url)
+        r = requests.get(base_url[json_type])
         s = r.status_code
         if s == 200:
             get_json_dic = r.json()
@@ -77,12 +79,13 @@ def create_json():
         })
 
     # 公開用jsonにデータを格納
-    json_dic.update({"prefectures_data": data})
+    json_dic.update({json_type: data})
+
+
+if __name__ == "__main__":
+    for i in base_url:
+        create_json(i)
 
     # jsonファイルの生成
     with open(file_path, "w") as file_:
         json.dump(json_dic, file_, ensure_ascii=False, indent=2)
-
-
-if __name__ == "__main__":
-    create_json()
