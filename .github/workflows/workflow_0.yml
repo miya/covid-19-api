@@ -3,7 +3,7 @@ name: runs every 0:00(JST)
 on:
   schedule:
     - cron:  "00 15 * * *"
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
