@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-13 18:33",
+  "update": "2020-04-13 19:05",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -209,7 +209,7 @@
       "deaths": 0
     },
     "宮城県": {
-      "cases": 45,
+      "cases": 51,
       "deaths": 0
     },
     "秋田県": {
@@ -225,7 +225,7 @@
       "deaths": 0
     },
     "茨城県": {
-      "cases": 103,
+      "cases": 109,
       "deaths": 5
     },
     "栃木県": {
@@ -237,19 +237,19 @@
       "deaths": 2
     },
     "埼玉県": {
-      "cases": 375,
+      "cases": 376,
       "deaths": 6
     },
     "千葉県": {
-      "cases": 424,
-      "deaths": 4
+      "cases": 468,
+      "deaths": 5
     },
     "東京都": {
-      "cases": 1902,
+      "cases": 2068,
       "deaths": 40
     },
     "神奈川県": {
-      "cases": 525,
+      "cases": 545,
       "deaths": 12
     },
     "新潟県": {
@@ -261,7 +261,7 @@
       "deaths": 0
     },
     "石川県": {
-      "cases": 104,
+      "cases": 113,
       "deaths": 0
     },
     "福井県": {
@@ -269,7 +269,7 @@
       "deaths": 2
     },
     "山梨県": {
-      "cases": 33,
+      "cases": 34,
       "deaths": 0
     },
     "長野県": {
@@ -285,8 +285,8 @@
       "deaths": 0
     },
     "愛知県": {
-      "cases": 348,
-      "deaths": 23
+      "cases": 350,
+      "deaths": 25
     },
     "三重県": {
       "cases": 17,
@@ -297,7 +297,7 @@
       "deaths": 0
     },
     "京都府": {
-      "cases": 181,
+      "cases": 193,
       "deaths": 3
     },
     "大阪府": {
@@ -333,7 +333,7 @@
       "deaths": 0
     },
     "山口県": {
-      "cases": 19,
+      "cases": 23,
       "deaths": 0
     },
     "徳島県": {
@@ -353,7 +353,7 @@
       "deaths": 0
     },
     "福岡県": {
-      "cases": 347,
+      "cases": 362,
       "deaths": 1
     },
     "佐賀県": {
@@ -365,7 +365,7 @@
       "deaths": 0
     },
     "熊本県": {
-      "cases": 26,
+      "cases": 27,
       "deaths": 1
     },
     "大分県": {
@@ -386,7 +386,7 @@
     }
   },
   "before_total_nums": {
-    "total_cases": 6878,
-    "total_deaths": 133
+    "total_cases": 7165,
+    "total_deaths": 136
   }
 }
