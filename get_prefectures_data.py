@@ -19,7 +19,6 @@ k = [
 # ファイル名
 file_path = "data/prefectures.json"
 
-
 # アップデート時間
 jst = timezone(timedelta(hours=+9), "JST")
 now = datetime.now(jst).strftime("%Y-%m-%d %H:%M")
