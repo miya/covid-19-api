@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-14 00:34",
+  "update": "2020-04-14 01:05",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -285,8 +285,8 @@
       "deaths": 0
     },
     "愛知県": {
-      "cases": 350,
-      "deaths": 25
+      "cases": 326,
+      "deaths": 24
     },
     "三重県": {
       "cases": 17,
@@ -386,7 +386,7 @@
     }
   },
   "before_total_nums": {
-    "total_cases": 7278,
-    "total_deaths": 138
+    "total_cases": 7254,
+    "total_deaths": 137
   }
 }
