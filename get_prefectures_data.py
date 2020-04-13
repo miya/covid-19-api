@@ -104,7 +104,6 @@ def create_json(json_type):
 
 if __name__ == "__main__":
     for i in base_url:
-        print(base_url[i])
         create_json(i)
 
     # jsonファイルの生成
