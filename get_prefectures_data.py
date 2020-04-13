@@ -19,20 +19,30 @@ k = [
 # ファイル名
 file_path = "data/prefectures.json"
 
-# API
-base_url = {"prefectures_data": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
-            "before_prefectures_data": "https://raw.githubusercontent.com/miya/covid19-jp-api/api2/before_prefectures.json"}
 
 # アップデート時間
 jst = timezone(timedelta(hours=+9), "JST")
 now = datetime.now(jst).strftime("%Y-%m-%d %H:%M")
+
+# API
+n = datetime.now(timezone(timedelta(hours=+10), "JST")).hour
+base_url = {"prefectures_data": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
+            "before_prefectures_data": "https://raw.githubusercontent.com/miya/covid19-jp-api/{}/before_prefectures.json".format(n)}
 
 # 公開用json
 json_dic = {
     "update": now,
     "data_source": base_url["prefectures_data"],
     "prefectures_data": {},
-    "before_prefectures_data": {}
+    "total_nums": {
+        "total_cases": 0,
+        "total_deaths": 0
+    },
+    "before_prefectures_data": {},
+    "before_total_nums": {
+        "total_cases": 0,
+        "total_deaths": 0
+    }
 }
 
 def create_json(json_type):
@@ -79,11 +89,22 @@ def create_json(json_type):
         })
 
     # 公開用jsonにデータを格納
-    json_dic.update({json_type: data})
+    if json_type == "prefectures_data":
+        nums_type = "total_nums"
+    else:
+        nums_type = "before_total_nums"
+    json_dic.update({
+        json_type: data,
+        nums_type: {
+            "total_cases": total_cases,
+            "total_deaths": total_deaths
+        }
+    })
 
 
 if __name__ == "__main__":
     for i in base_url:
+        print(base_url[i])
         create_json(i)
 
     # jsonファイルの生成
