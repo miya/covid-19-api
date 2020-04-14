@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-14 11:05",
+  "update": "2020-04-14 11:34",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -72,7 +72,7 @@
     },
     "福井県": {
       "cases": 92,
-      "deaths": 2
+      "deaths": 3
     },
     "山梨県": {
       "cases": 36,
@@ -127,7 +127,7 @@
       "deaths": 0
     },
     "島根県": {
-      "cases": 8,
+      "cases": 10,
       "deaths": 0
     },
     "岡山県": {
@@ -192,8 +192,8 @@
     }
   },
   "total_nums": {
-    "total_cases": 7540,
-    "total_deaths": 143
+    "total_cases": 7542,
+    "total_deaths": 144
   },
   "before_prefectures_data": {
     "北海道": {
