@@ -1,10 +1,10 @@
 {
-  "update": "2020-04-14 17:05",
+  "update": "2020-04-14 17:40",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
-      "cases": 269,
-      "deaths": 11
+      "cases": 286,
+      "deaths": 13
     },
     "青森県": {
       "cases": 22,
@@ -15,7 +15,7 @@
       "deaths": 0
     },
     "宮城県": {
-      "cases": 54,
+      "cases": 56,
       "deaths": 0
     },
     "秋田県": {
@@ -43,7 +43,7 @@
       "deaths": 2
     },
     "埼玉県": {
-      "cases": 430,
+      "cases": 434,
       "deaths": 7
     },
     "千葉県": {
@@ -51,7 +51,7 @@
       "deaths": 5
     },
     "東京都": {
-      "cases": 2158,
+      "cases": 2318,
       "deaths": 42
     },
     "神奈川県": {
@@ -68,7 +68,7 @@
     },
     "石川県": {
       "cases": 121,
-      "deaths": 0
+      "deaths": 1
     },
     "福井県": {
       "cases": 92,
@@ -79,7 +79,7 @@
       "deaths": 0
     },
     "長野県": {
-      "cases": 36,
+      "cases": 37,
       "deaths": 0
     },
     "岐阜県": {
@@ -87,7 +87,7 @@
       "deaths": 1
     },
     "静岡県": {
-      "cases": 46,
+      "cases": 47,
       "deaths": 0
     },
     "愛知県": {
@@ -99,7 +99,7 @@
       "deaths": 0
     },
     "滋賀県": {
-      "cases": 40,
+      "cases": 50,
       "deaths": 0
     },
     "京都府": {
@@ -119,7 +119,7 @@
       "deaths": 0
     },
     "和歌山県": {
-      "cases": 39,
+      "cases": 40,
       "deaths": 1
     },
     "鳥取県": {
@@ -171,7 +171,7 @@
       "deaths": 0
     },
     "熊本県": {
-      "cases": 28,
+      "cases": 30,
       "deaths": 1
     },
     "大分県": {
@@ -187,13 +187,13 @@
       "deaths": 0
     },
     "沖縄県": {
-      "cases": 72,
+      "cases": 76,
       "deaths": 0
     }
   },
   "total_nums": {
-    "total_cases": 7591,
-    "total_deaths": 146
+    "total_cases": 7793,
+    "total_deaths": 149
   },
   "before_prefectures_data": {
     "北海道": {
