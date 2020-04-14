@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-15 00:34",
+  "update": "2020-04-15 01:05",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -237,7 +237,7 @@
       "deaths": 2
     },
     "埼玉県": {
-      "cases": 428,
+      "cases": 430,
       "deaths": 7
     },
     "千葉県": {
@@ -305,7 +305,7 @@
       "deaths": 6
     },
     "兵庫県": {
-      "cases": 380,
+      "cases": 384,
       "deaths": 15
     },
     "奈良県": {
@@ -386,7 +386,7 @@
     }
   },
   "before_total_nums": {
-    "total_cases": 7534,
+    "total_cases": 7540,
     "total_deaths": 143
   }
 }
