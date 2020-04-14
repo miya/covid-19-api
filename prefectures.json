@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-15 07:34",
+  "update": "2020-04-15 08:04",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
