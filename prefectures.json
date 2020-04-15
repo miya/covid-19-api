@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-15 18:34",
+  "update": "2020-04-15 19:05",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -221,7 +221,7 @@
       "deaths": 0
     },
     "福島県": {
-      "cases": 38,
+      "cases": 39,
       "deaths": 0
     },
     "茨城県": {
@@ -241,15 +241,15 @@
       "deaths": 7
     },
     "千葉県": {
-      "cases": 487,
-      "deaths": 5
+      "cases": 502,
+      "deaths": 6
     },
     "東京都": {
       "cases": 2319,
       "deaths": 42
     },
     "神奈川県": {
-      "cases": 575,
+      "cases": 579,
       "deaths": 14
     },
     "新潟県": {
@@ -293,11 +293,11 @@
       "deaths": 0
     },
     "滋賀県": {
-      "cases": 50,
+      "cases": 51,
       "deaths": 0
     },
     "京都府": {
-      "cases": 207,
+      "cases": 208,
       "deaths": 3
     },
     "大阪府": {
@@ -353,11 +353,11 @@
       "deaths": 0
     },
     "福岡県": {
-      "cases": 374,
+      "cases": 389,
       "deaths": 4
     },
     "佐賀県": {
-      "cases": 13,
+      "cases": 15,
       "deaths": 0
     },
     "長崎県": {
@@ -386,7 +386,7 @@
     }
   },
   "before_total_nums": {
-    "total_cases": 7839,
-    "total_deaths": 151
+    "total_cases": 7878,
+    "total_deaths": 152
   }
 }
