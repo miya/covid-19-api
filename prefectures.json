@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-15 16:34",
+  "update": "2020-04-15 17:05",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -197,8 +197,8 @@
   },
   "before_prefectures_data": {
     "北海道": {
-      "cases": 269,
-      "deaths": 11
+      "cases": 287,
+      "deaths": 13
     },
     "青森県": {
       "cases": 22,
@@ -209,11 +209,11 @@
       "deaths": 0
     },
     "宮城県": {
-      "cases": 54,
+      "cases": 56,
       "deaths": 0
     },
     "秋田県": {
-      "cases": 15,
+      "cases": 16,
       "deaths": 0
     },
     "山形県": {
@@ -225,11 +225,11 @@
       "deaths": 0
     },
     "茨城県": {
-      "cases": 110,
+      "cases": 116,
       "deaths": 5
     },
     "栃木県": {
-      "cases": 36,
+      "cases": 37,
       "deaths": 0
     },
     "群馬県": {
@@ -237,19 +237,19 @@
       "deaths": 2
     },
     "埼玉県": {
-      "cases": 430,
+      "cases": 435,
       "deaths": 7
     },
     "千葉県": {
-      "cases": 486,
+      "cases": 487,
       "deaths": 5
     },
     "東京都": {
-      "cases": 2158,
+      "cases": 2319,
       "deaths": 42
     },
     "神奈川県": {
-      "cases": 562,
+      "cases": 575,
       "deaths": 14
     },
     "新潟県": {
@@ -261,8 +261,8 @@
       "deaths": 0
     },
     "石川県": {
-      "cases": 121,
-      "deaths": 0
+      "cases": 131,
+      "deaths": 3
     },
     "福井県": {
       "cases": 92,
@@ -273,7 +273,7 @@
       "deaths": 0
     },
     "長野県": {
-      "cases": 36,
+      "cases": 37,
       "deaths": 0
     },
     "岐阜県": {
@@ -281,7 +281,7 @@
       "deaths": 1
     },
     "静岡県": {
-      "cases": 46,
+      "cases": 47,
       "deaths": 0
     },
     "愛知県": {
@@ -293,11 +293,11 @@
       "deaths": 0
     },
     "滋賀県": {
-      "cases": 40,
+      "cases": 50,
       "deaths": 0
     },
     "京都府": {
-      "cases": 205,
+      "cases": 207,
       "deaths": 3
     },
     "大阪府": {
@@ -305,15 +305,15 @@
       "deaths": 6
     },
     "兵庫県": {
-      "cases": 397,
+      "cases": 402,
       "deaths": 15
     },
     "奈良県": {
-      "cases": 44,
+      "cases": 47,
       "deaths": 0
     },
     "和歌山県": {
-      "cases": 39,
+      "cases": 40,
       "deaths": 1
     },
     "鳥取県": {
@@ -325,7 +325,7 @@
       "deaths": 0
     },
     "岡山県": {
-      "cases": 15,
+      "cases": 16,
       "deaths": 0
     },
     "広島県": {
@@ -365,7 +365,7 @@
       "deaths": 0
     },
     "熊本県": {
-      "cases": 28,
+      "cases": 30,
       "deaths": 1
     },
     "大分県": {
@@ -381,12 +381,12 @@
       "deaths": 0
     },
     "沖縄県": {
-      "cases": 72,
+      "cases": 76,
       "deaths": 0
     }
   },
   "before_total_nums": {
-    "total_cases": 7591,
-    "total_deaths": 146
+    "total_cases": 7839,
+    "total_deaths": 151
   }
 }
