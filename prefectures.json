@@ -1,9 +1,9 @@
 {
-  "update": "2020-04-16 21:06",
+  "update": "2020-04-16 21:34",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
-      "cases": 332,
+      "cases": 333,
       "deaths": 14
     },
     "青森県": {
@@ -15,7 +15,7 @@
       "deaths": 0
     },
     "宮城県": {
-      "cases": 75,
+      "cases": 78,
       "deaths": 0
     },
     "秋田県": {
@@ -39,23 +39,23 @@
       "deaths": 0
     },
     "群馬県": {
-      "cases": 107,
+      "cases": 112,
       "deaths": 4
     },
     "埼玉県": {
-      "cases": 519,
+      "cases": 529,
       "deaths": 10
     },
     "千葉県": {
-      "cases": 551,
+      "cases": 595,
       "deaths": 7
     },
     "東京都": {
       "cases": 2595,
-      "deaths": 53
+      "deaths": 56
     },
     "神奈川県": {
-      "cases": 674,
+      "cases": 675,
       "deaths": 15
     },
     "新潟県": {
@@ -63,7 +63,7 @@
       "deaths": 0
     },
     "富山県": {
-      "cases": 65,
+      "cases": 68,
       "deaths": 0
     },
     "石川県": {
@@ -75,11 +75,11 @@
       "deaths": 4
     },
     "山梨県": {
-      "cases": 42,
+      "cases": 43,
       "deaths": 0
     },
     "長野県": {
-      "cases": 39,
+      "cases": 45,
       "deaths": 0
     },
     "岐阜県": {
@@ -87,15 +87,15 @@
       "deaths": 1
     },
     "静岡県": {
-      "cases": 48,
+      "cases": 49,
       "deaths": 0
     },
     "愛知県": {
-      "cases": 356,
+      "cases": 370,
       "deaths": 24
     },
     "三重県": {
-      "cases": 23,
+      "cases": 25,
       "deaths": 1
     },
     "滋賀県": {
@@ -107,11 +107,11 @@
       "deaths": 3
     },
     "大阪府": {
-      "cases": 968,
+      "cases": 1020,
       "deaths": 8
     },
     "兵庫県": {
-      "cases": 453,
+      "cases": 454,
       "deaths": 16
     },
     "奈良県": {
@@ -131,11 +131,11 @@
       "deaths": 0
     },
     "岡山県": {
-      "cases": 16,
+      "cases": 17,
       "deaths": 0
     },
     "広島県": {
-      "cases": 113,
+      "cases": 115,
       "deaths": 0
     },
     "山口県": {
@@ -159,7 +159,7 @@
       "deaths": 1
     },
     "福岡県": {
-      "cases": 446,
+      "cases": 461,
       "deaths": 7
     },
     "佐賀県": {
@@ -175,7 +175,7 @@
       "deaths": 1
     },
     "大分県": {
-      "cases": 50,
+      "cases": 54,
       "deaths": 1
     },
     "宮崎県": {
@@ -192,8 +192,8 @@
     }
   },
   "total_nums": {
-    "total_cases": 8933,
-    "total_deaths": 185
+    "total_cases": 9099,
+    "total_deaths": 188
   },
   "before_prefectures_data": {
     "北海道": {
