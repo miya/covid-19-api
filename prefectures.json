@@ -1,5 +1,5 @@
 {
-  "update": "2020-04-16 21:34",
+  "update": "2020-04-16 22:04",
   "data_source": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   "prefectures_data": {
     "北海道": {
@@ -197,8 +197,8 @@
   },
   "before_prefectures_data": {
     "北海道": {
-      "cases": 310,
-      "deaths": 14
+      "cases": 287,
+      "deaths": 13
     },
     "青森県": {
       "cases": 22,
@@ -209,7 +209,7 @@
       "deaths": 0
     },
     "宮城県": {
-      "cases": 65,
+      "cases": 64,
       "deaths": 0
     },
     "秋田県": {
@@ -217,103 +217,103 @@
       "deaths": 0
     },
     "山形県": {
-      "cases": 49,
+      "cases": 43,
       "deaths": 0
     },
     "福島県": {
-      "cases": 40,
+      "cases": 39,
       "deaths": 0
     },
     "茨城県": {
-      "cases": 119,
+      "cases": 116,
       "deaths": 5
     },
     "栃木県": {
-      "cases": 39,
+      "cases": 37,
       "deaths": 0
     },
     "群馬県": {
-      "cases": 106,
-      "deaths": 4
+      "cases": 90,
+      "deaths": 2
     },
     "埼玉県": {
-      "cases": 475,
+      "cases": 461,
       "deaths": 9
     },
     "千葉県": {
-      "cases": 537,
-      "deaths": 7
+      "cases": 502,
+      "deaths": 6
     },
     "東京都": {
-      "cases": 2446,
-      "deaths": 53
+      "cases": 2319,
+      "deaths": 47
     },
     "神奈川県": {
-      "cases": 619,
+      "cases": 579,
       "deaths": 14
     },
     "新潟県": {
-      "cases": 46,
+      "cases": 45,
       "deaths": 0
     },
     "富山県": {
-      "cases": 61,
+      "cases": 55,
       "deaths": 0
     },
     "石川県": {
-      "cases": 140,
-      "deaths": 4
+      "cases": 131,
+      "deaths": 3
     },
     "福井県": {
-      "cases": 100,
-      "deaths": 4
+      "cases": 92,
+      "deaths": 3
     },
     "山梨県": {
-      "cases": 40,
+      "cases": 36,
       "deaths": 0
     },
     "長野県": {
-      "cases": 39,
+      "cases": 37,
       "deaths": 0
     },
     "岐阜県": {
-      "cases": 130,
+      "cases": 127,
       "deaths": 1
     },
     "静岡県": {
-      "cases": 48,
+      "cases": 47,
       "deaths": 0
     },
     "愛知県": {
-      "cases": 349,
+      "cases": 342,
       "deaths": 24
     },
     "三重県": {
-      "cases": 20,
+      "cases": 19,
       "deaths": 0
     },
     "滋賀県": {
-      "cases": 52,
-      "deaths": 1
+      "cases": 51,
+      "deaths": 0
     },
     "京都府": {
-      "cases": 215,
+      "cases": 208,
       "deaths": 3
     },
     "大阪府": {
-      "cases": 968,
-      "deaths": 7
+      "cases": 894,
+      "deaths": 6
     },
     "兵庫県": {
-      "cases": 423,
+      "cases": 403,
       "deaths": 15
     },
     "奈良県": {
-      "cases": 53,
-      "deaths": 1
+      "cases": 47,
+      "deaths": 0
     },
     "和歌山県": {
-      "cases": 42,
+      "cases": 40,
       "deaths": 1
     },
     "鳥取県": {
@@ -321,7 +321,7 @@
       "deaths": 0
     },
     "島根県": {
-      "cases": 13,
+      "cases": 10,
       "deaths": 0
     },
     "岡山県": {
@@ -329,11 +329,11 @@
       "deaths": 0
     },
     "広島県": {
-      "cases": 110,
+      "cases": 89,
       "deaths": 0
     },
     "山口県": {
-      "cases": 28,
+      "cases": 25,
       "deaths": 0
     },
     "徳島県": {
@@ -341,35 +341,35 @@
       "deaths": 0
     },
     "香川県": {
-      "cases": 20,
+      "cases": 17,
       "deaths": 0
     },
     "愛媛県": {
-      "cases": 40,
+      "cases": 39,
       "deaths": 2
     },
     "高知県": {
-      "cases": 62,
-      "deaths": 1
+      "cases": 60,
+      "deaths": 0
     },
     "福岡県": {
-      "cases": 435,
-      "deaths": 6
+      "cases": 406,
+      "deaths": 4
     },
     "佐賀県": {
       "cases": 15,
       "deaths": 0
     },
     "長崎県": {
-      "cases": 15,
+      "cases": 14,
       "deaths": 0
     },
     "熊本県": {
-      "cases": 33,
+      "cases": 31,
       "deaths": 1
     },
     "大分県": {
-      "cases": 50,
+      "cases": 45,
       "deaths": 0
     },
     "宮崎県": {
@@ -381,12 +381,12 @@
       "deaths": 0
     },
     "沖縄県": {
-      "cases": 86,
+      "cases": 76,
       "deaths": 0
     }
   },
   "before_total_nums": {
-    "total_cases": 8517,
-    "total_deaths": 177
+    "total_cases": 8017,
+    "total_deaths": 159
   }
 }
