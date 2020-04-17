@@ -1,6 +1,6 @@
 # covid19-jp-api
 
-![Scheduler](https://github.com/miya/covid19-jp-api/workflows/Scheduler/badge.svg)
+FireBaseに移行したため現在は稼働していません。
 
 ## なんこれ
 コロナウイルスによる都道府県別の感染者数と死亡者数を公開している[API](https://github.com/ryo-ma/covid19-japan-web-api)をGithubActionsで定期的に叩き、このリポジトリのgh-pagesにブランチ取得したjsonファイルをプッシュすることで自分のGithubPagesに擬似的にAPIを作っています。
