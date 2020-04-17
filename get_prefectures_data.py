@@ -1,7 +1,27 @@
-import json
+import os
 import requests
 from time import sleep
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 from datetime import datetime, timedelta, timezone
+
+service_account_key = {
+  "type": os.environ.get("type"),
+  "project_id":  os.environ.get("project_id"),
+  "private_key_id":  os.environ.get("private_key_id"),
+  "private_key": os.environ.get("private_key").replace("\\n", "\n"),
+  "client_email":  os.environ.get("client_email"),
+  "client_id": os.environ.get("client_id"),
+  "auth_uri":  os.environ.get("auth_uri"),
+  "token_uri":  os.environ.get("token_uri"),
+  "auth_provider_x509_cert_url":  os.environ.get("auth_provider_x509_cert_url"),
+  "client_x509_cert_url":  os.environ.get("client_x509_cert_url")
+}
+
+cred = credentials.Certificate(service_account_key)
+firebase_admin.initialize_app(cred)
+db = firestore.client()
 
 # 都道府県の単位を合わせる用 東京 => 東京都
 t = ["東京"]
@@ -16,46 +36,35 @@ k = [
     "宮崎", "鹿児島", "沖縄"
 ]
 
-# ファイル名
-file_path = "data/prefectures.json"
-
 # アップデート時間
 jst = timezone(timedelta(hours=+9), "JST")
 now = datetime.now(jst).strftime("%Y-%m-%d %H:%M")
 
 # API
-n = datetime.now(timezone(timedelta(hours=+10), "JST")).hour
-base_url = {"prefectures_data": "https://covid19-japan-web-api.now.sh/api/v1/prefectures",
-            "before_prefectures_data": "https://raw.githubusercontent.com/miya/covid19-jp-api/{}/before_prefectures.json".format(n)}
+base_url = "https://covid19-japan-web-api.now.sh/api/v1/prefectures"
 
-# 公開用json
-json_dic = {
-    "update": now,
-    "data_source": base_url["prefectures_data"],
-    "prefectures_data": {},
-    "total_nums": {
-        "total_cases": 0,
-        "total_deaths": 0
-    },
-    "before_prefectures_data": {},
-    "before_total_nums": {
+# 公開用dictionary
+data_dic = {
+    "detail": {"update": now},
+    "prefectures": {},
+    "total": {
         "total_cases": 0,
         "total_deaths": 0
     }
 }
 
-def create_json(json_type):
-    data = {}
-    get_json_dic = {}
+def create_data_dic():
+    prefectures = {}
+    json_dic = {}
     total_cases = 0
     total_deaths = 0
     cnt = 0
 
     for i in range(5):
-        r = requests.get(base_url[json_type])
+        r = requests.get(base_url)
         s = r.status_code
         if s == 200:
-            get_json_dic = r.json()
+            json_dic = r.json()
             break
         else:
             cnt += 1
@@ -64,7 +73,7 @@ def create_json(json_type):
             print("データを取得できませんでした。")
             exit()
 
-    for i in get_json_dic:
+    for i in json_dic:
 
         # 都道府県名の単位の修正
         name_ja = i["name_ja"]
@@ -80,7 +89,7 @@ def create_json(json_type):
         total_deaths += i["deaths"]
 
         # 都道府県名、感染者数、死亡者数を格納
-        data.update({
+        prefectures.update({
             i["name_ja"]: {
                 "cases": i["cases"],
                 "deaths": i["deaths"]
@@ -88,13 +97,9 @@ def create_json(json_type):
         })
 
     # 公開用jsonにデータを格納
-    if json_type == "prefectures_data":
-        nums_type = "total_nums"
-    else:
-        nums_type = "before_total_nums"
-    json_dic.update({
-        json_type: data,
-        nums_type: {
+    data_dic.update({
+        "prefectures": prefectures,
+        "total": {
             "total_cases": total_cases,
             "total_deaths": total_deaths
         }
@@ -102,9 +107,6 @@ def create_json(json_type):
 
 
 if __name__ == "__main__":
-    for i in base_url:
-        create_json(i)
-
-    # jsonファイルの生成
-    with open(file_path, "w") as file_:
-        json.dump(json_dic, file_, ensure_ascii=False, indent=2)
+    create_data_dic()
+    doc_num = str(datetime.now(jst).hour)
+    db.collection("data").document(doc_num).set(data_dic)
